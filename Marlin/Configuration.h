@@ -753,7 +753,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 101.7 }  // # extruder was calibrated
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 94.92 }  // # extruder was calibrated
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -999,7 +999,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -44, -5, 0 }     //# CHANGED XXX
+#define NOZZLE_TO_PROBE_OFFSET { -38, +6, -3 }     //# CHANGED Hero Me Gen 5
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1041,7 +1041,7 @@
  *     But: `M851 Z+1` with a CLEARANCE of 2  =>  2mm from bed to nozzle.
  */
 #define Z_CLEARANCE_DEPLOY_PROBE    5 // Z Clearance for Deploy/Stow          //# CHANGED
-#define Z_CLEARANCE_BETWEEN_PROBES  3 // Z Clearance between probe points     //# CHANGED
+#define Z_CLEARANCE_BETWEEN_PROBES  1 // Z Clearance between probe points     //# CHANGED
 #define Z_CLEARANCE_MULTI_PROBE     3 // Z Clearance between multiple probes  //# CHANGED
 //#define Z_AFTER_PROBING           5 // Z position after probing is done
 
@@ -2294,14 +2294,14 @@
 // Use software PWM to drive the fan, as for the heaters. This uses a very low frequency
 // which is not as annoying as with the hardware PWM. On the other hand, if this frequency
 // is too low, you should also increment SOFT_PWM_SCALE.
-//#define FAN_SOFT_PWM
+#define FAN_SOFT_PWM
 
 // Incrementing this by 1 will double the software PWM frequency,
 // affecting heaters, and the fan if FAN_SOFT_PWM is enabled.
 // However, control resolution will be halved for each increment;
 // at zero value, there are 128 effective control positions.
 // :[0,1,2,3,4,5,6,7]
-#define SOFT_PWM_SCALE 0
+//#define SOFT_PWM_SCALE 1
 
 // If SOFT_PWM_SCALE is set to a value higher than 0, dithering can
 // be used to mitigate the associated resolution loss. If enabled,
