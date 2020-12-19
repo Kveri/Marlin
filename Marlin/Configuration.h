@@ -491,9 +491,9 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
   // Creality Ender-3
-  #define DEFAULT_Kp 21.89
-  #define DEFAULT_Ki 1.63
-  #define DEFAULT_Kd 73.52
+  #define DEFAULT_Kp 23.34
+  #define DEFAULT_Ki 1.92
+  #define DEFAULT_Kd 70.74
 
   // Ultimaker
   //#define DEFAULT_Kp 22.2
@@ -547,9 +547,9 @@
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 138.04   //# CHANGED
-  #define DEFAULT_bedKi 24.42    //# CHANGED
-  #define DEFAULT_bedKd 520.18   //# CHANGED
+  #define DEFAULT_bedKp 134.11   //# CHANGED
+  #define DEFAULT_bedKi 25.98    //# CHANGED
+  #define DEFAULT_bedKd 461.41   //# CHANGED
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from pidautotune
@@ -753,7 +753,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 94.92 }  // # extruder was calibrated
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 94.41 }  // # extruder was calibrated
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -994,19 +994,19 @@
  *   L |        1  | R <-- Example "1" (right+,  back+)
  *   E |  2        | I <-- Example "2" ( left-,  back+)
  *   F |[-]  N  [+]| G <-- Nozzle
- *   T |       3   | H <-- Example "3" (right+, front-)
+ *   T |       3   | H <-- Exam ple "3" (right+, front-)
  *     | 4         | T <-- Example "4" ( left-, front-)
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -38, +6, -3 }     //# CHANGED Hero Me Gen 5
+#define NOZZLE_TO_PROBE_OFFSET { -38, +6, -2 }     //# CHANGED Hero Me Gen 5
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
 #define PROBING_MARGIN 10
 
 // X and Y axis travel speed (mm/min) between probes
-#define XY_PROBE_SPEED (200*60)   //# CHANGED
+#define XY_PROBE_SPEED (200*80)   //# CHANGED
 
 // Feedrate (mm/min) for the first approach when double-probing (MULTIPLE_PROBING == 2)
 #define Z_PROBE_SPEED_FAST HOMING_FEEDRATE_Z
@@ -1135,7 +1135,7 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 235
+#define X_BED_SIZE 230   //# CHANGED
 #define Y_BED_SIZE 230   //# CHANGED
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
@@ -1255,7 +1255,7 @@
  * Normally G28 leaves leveling disabled on completion. Enable
  * this option to have G28 restore the prior leveling state.
  */
-//#define RESTORE_LEVELING_AFTER_G28
+#define RESTORE_LEVELING_AFTER_G28
 
 /**
  * Enable detailed logging of G28, G29, M48, etc.
@@ -1294,7 +1294,7 @@
 #if EITHER(AUTO_BED_LEVELING_LINEAR, AUTO_BED_LEVELING_BILINEAR)
 
   // Set the number of grid points per dimension.
-  #define GRID_MAX_POINTS_X 5
+  #define GRID_MAX_POINTS_X 7
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   // Probe along the Y axis, advancing X after each column
