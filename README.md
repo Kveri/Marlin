@@ -1,3 +1,24 @@
+# My own Marlin version, mostly only modifications in Configurations.h and Configuration_adv.h
+
+Current setup:
+ - Ender 3 Pro, glass mirror bed (4mm, roughly 420g)
+ - SKR Mini E3 v3.0 + TFT35
+ - BLTouch (7x7 bilinear ABL), Micro Swiss Direct Drive, pankage 25mm E motor, filament runout sensor
+ - Motor dampers, Z screw bearing holder and turnable knob, heavy-duty springs and aluminium bed knobs
+ - OctoPrint on RPi4 + RPi camera v2.0
+ - Sensorless homing, Linear advance (K=0.11)
+ - Advanced pause
+ 
+Planned upgrades:
+ - Hero Me gen 5 or Hydra cooling setup w/ two 5015 part cooling fans and Noctua A4x20 hotend cooling fan
+ - better placement for filament runout sensor (on top of extruder)
+ - better setup of filament guide tube (or maybe without tube)
+ - rail covers
+ - custom belt tensioners
+ - psu fan upgrade (12cm noctua) and custom cover
+ - new TFT35 back cover
+ 
+
 # Marlin 3D Printer Firmware
 
 ![GitHub](https://img.shields.io/github/license/marlinfirmware/marlin.svg)
