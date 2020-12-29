@@ -2,7 +2,7 @@
 
 Current setup:
  - Ender 3 Pro, glass mirror bed (4mm, roughly 420g)
- - SKR Mini E3 v3.0 + TFT35
+ - SKR Mini E3 v2.0 + TFT35
  - BLTouch (7x7 bilinear ABL), Micro Swiss Direct Drive, pankage 25mm E motor, filament runout sensor
  - Motor dampers, Z screw bearing holder and turnable knob, heavy-duty springs and aluminium bed knobs
  - OctoPrint on RPi4 + RPi camera v2.0
